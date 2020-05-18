@@ -20,15 +20,15 @@ class AddNoteActivity : AppCompatActivity() {
         setContentView(R.layout.activity_add_note)
 
         try {
-            //update note
-            //change actionbar title
-            supportActionBar!!.title = "Update Note"
-            //change button text
-            addBtn.text = "Add"
             val bundle : Bundle? = intent.extras
             id = bundle!!.getInt("ID", 0)
             if (id!=0)
             {
+                //update note
+                //change actionbar title
+                supportActionBar!!.title = "Update Note"
+                //change button text
+                addBtn.text = "Update"
                 titleEt.setText(bundle.getString("name"))
                 descEt.setText(bundle.getString("des"))
             }
